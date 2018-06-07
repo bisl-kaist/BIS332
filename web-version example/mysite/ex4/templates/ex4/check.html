@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+{% if user_id %}
+Your login name is: '{{user_id}}'
+{% else %}
+No user_id!
+{% endif %}
+
+<br><br>
+{% csrf_token %}
+<div>
+    <a href='../query'>If you want to search database, click </a><br<br>
+</div>
+
+<button type = 'button' onclick="location.href = '../' ">Or, go back</a>
+<!--<a href= '../'>Go back to Home</a> -->
+</body>
+
+</html>
+

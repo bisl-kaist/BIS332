@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+=========== [Search Key Request Page] ==============<br>
+Enter your search key
+	<form method = 'POST' action = "result/">
+		{% csrf_token %}
+		Input Student Number: <input type='text', size='30', name='query_id', id='query_id'> <br>
+		<button type='submit'> Submit </button>
+	</form>
+</body>
+</html>

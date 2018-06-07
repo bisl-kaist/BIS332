@@ -1,0 +1,4 @@
+CREATE TABLE mydata(
+no integer primary key,
+name text,
+phone text);

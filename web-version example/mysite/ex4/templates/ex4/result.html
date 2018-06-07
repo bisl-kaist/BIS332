@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+
+<body>
+    Your input: '{{ input }}'<br>
+    {% if input.isdigit%}
+
+    Your query: SELECT * FROM mydata WHERE no > '{{ input }}'<br>
+    <!-- raw result: '{{ result_list }} -->
+    <br>
+    <table style="text-align:center;">
+        <caption><b>RESULT_TABLE</b></caption>
+    	<thead>
+            <th width="150">sno</th>
+            <th width="150">name</th>
+            <th width= "150">phone number</th>
+	</thead>
+
+        {% for item_list in result_list %}
+        <tr>
+	    {% for key, value in item_list.items %}
+            <td width="150"> {{ value }} </td>
+            {% endfor %}
+	</tr>
+	{% endfor %}
+    {% else %}
+    ** Invalid input!!
+    {% endif %}
+    </table>
+    <div>
+        <button type = 'button' onclick="location.href = '../' ">Go Back</a>
+    </div>
+    <div>
+        <button type = 'button' onclick="location.href = '../../' ">Go Home</a>
+    </div>
+</body>
+
+<script>
+  var result = '{{ result_list }}'
+  var a = 'a'
+</script>
